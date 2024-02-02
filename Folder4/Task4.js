@@ -1,20 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Image Fetcher</title>
-</head>
-<body>
-    <label for="widthInput">Ширина (от 100 до 300):</label>
-    <input type="number" id="widthInput" min="100" max="300">
-    <label for="heightInput">Высота (от 100 до 300):</label>
-    <input type="number" id="heightInput" min="100" max="300">
-    <button onclick="submitRequest()">Получить изображение</button>
-    <div id="imageContainer"></div>
-
-    <script>
-        function submitRequest() {
+function submitRequest() {
             const width = document.getElementById('widthInput').value;
             const height = document.getElementById('heightInput').value;
             const imageContainer = document.getElementById('imageContainer');
@@ -48,6 +32,3 @@
           function isValidNumber(num) {
             return !isNaN(num) && num >= 100 && num <= 300;
         }
-    </script>
-</body>
-</html>
